@@ -9,15 +9,27 @@
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>2dqqx9hj9d1c9</unique-id>
     <saved-with-version>15802</saved-with-version>
-    <used-plugins />
-    <used-behaviors />
+    <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>640</width>
-        <height>480</height>
+        <width>1024</width>
+        <height>768</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <use-loader-layout>0</use-loader-layout>
@@ -34,15 +46,195 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1" />
-    <families />
+    <object-folder expanded="1">
+        <object-type name="CandyBullet" sid="9673370448401844">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="7830517618043166">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3641270487847377" speed="5">
+                    <frame duration="1" hotspotX="0.969231" hotspotY="0.969231" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RainbowBullet" sid="8377501223790628">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="7059972059097016">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3346605964146596" speed="5">
+                    <frame duration="1" hotspotX="0.969231" hotspotY="0.969231" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Player" sid="5424015119923811">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Is_Shooting" sid="8021923539965969" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="4168963046969531">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7259950249996225" speed="5">
+                    <frame duration="1" hotspotX="-0.135802" hotspotY="-0.175439">
+                        <image-point name="Offset" x="7.02469" y="0.377193" />
+                        <image-point name="Bulletspawn" x="0.481481" y="0.412281" />
+                        <collision-poly>
+                            <point x="0.37037" y="0.263158" />
+                            <point x="0.493827" y="0.236842" />
+                            <point x="0.580247" y="0.298246" />
+                            <point x="0.654321" y="0.5" />
+                            <point x="0.555556" y="0.684211" />
+                            <point x="0.493827" y="1" />
+                            <point x="0.197531" y="0.859649" />
+                            <point x="0.197531" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="0" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="412315374568295" speed="5">
+                    <frame duration="1" hotspotX="-0.134328" hotspotY="-0.173469">
+                        <image-point name="Offset" x="7.02985" y="0.377551" />
+                        <image-point name="Bulletspawn" x="0.477612" y="0.408163" />
+                        <collision-poly>
+                            <point x="0.313433" y="0.132653" />
+                            <point x="0.462687" y="0.102041" />
+                            <point x="0.567164" y="0.173469" />
+                            <point x="0.656716" y="0.408163" />
+                            <point x="0.537313" y="0.622449" />
+                            <point x="0.462687" y="0.979592" />
+                            <point x="0.104478" y="0.826531" />
+                            <point x="0.104478" y="0.408163" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="-0.134328" hotspotY="-0.173469">
+                        <image-point name="Offset" x="7.02985" y="0.377551" />
+                        <image-point name="Bulletspawn" x="0.477612" y="0.408163" />
+                        <collision-poly>
+                            <point x="0.313433" y="0.132653" />
+                            <point x="0.462687" y="0.102041" />
+                            <point x="0.567164" y="0.173469" />
+                            <point x="0.656716" y="0.408163" />
+                            <point x="0.537313" y="0.622449" />
+                            <point x="0.462687" y="0.989796" />
+                            <point x="0.104478" y="0.826531" />
+                            <point x="0.104478" y="0.408163" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="-0.134328" hotspotY="-0.173469">
+                        <image-point name="Offset" x="7.02985" y="0.377551" />
+                        <image-point name="Bulletspawn" x="0.477612" y="0.408163" />
+                        <collision-poly>
+                            <point x="0.313433" y="0.132653" />
+                            <point x="0.462687" y="0.102041" />
+                            <point x="0.567164" y="0.173469" />
+                            <point x="0.656716" y="0.408163" />
+                            <point x="0.537313" y="0.622449" />
+                            <point x="0.462687" y="0.989796" />
+                            <point x="0.104478" y="0.826531" />
+                            <point x="0.104478" y="0.408163" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Ground" sid="8967912195942348">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="801741130860562">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3901778309219911" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Platform" sid="9954332209644613">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="1882124537840604">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8654830834961327" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground" sid="4632464311212554">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Keyboard" sid="6931130323221245">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Mouse" sid="6720259155696203">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="PlayerOffset" sid="9291124763591496">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="4687193850640579">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="6456444460481526">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5989433585931936" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="Bullets" plugin-id="Sprite" sid="9443698752839947">
+            <members>
+                <member>CandyBullet</member>
+                <member>RainbowBullet</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="BulletSpeed" sid="4852858200481747" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet2" sid="7236876679992914">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+        </family>
+    </families>
     <layout-folder expanded="1">
-        <layout>Layout 1.xml</layout>
+        <layout>1_TitleScreen.xml</layout>
+        <layout>2_Intro.xml</layout>
+        <layout>3_GameLevel.xml</layout>
+        <layout>4_LoseState.xml</layout>
+        <layout>5_WinState.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>1_Events_TitleScreen.xml</event-sheet>
+        <event-sheet>01_Events_Main_Controls.xml</event-sheet>
+        <event-sheet>00_Events_Pre-Game_Controls.xml</event-sheet>
+        <event-sheet>2_Events_Intro.xml</event-sheet>
+        <event-sheet>3_Events_GameLevel.xml</event-sheet>
+        <event-sheet>4_Events_LoseState.xml</event-sheet>
+        <event-sheet>5_Events_WinState.xml</event-sheet>
     </event-folder>
-    <global-instances />
+    <global-instances>
+        <global-instance type="Keyboard" uid="8" />
+        <global-instance type="Mouse" uid="9" />
+    </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
     <files-folder expanded="1">

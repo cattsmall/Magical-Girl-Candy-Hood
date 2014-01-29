@@ -10,8 +10,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1">Layout 1</layout>
-        <event-sheet>Event sheet 1</event-sheet>
+        <layout active="1">3_GameLevel</layout>
+        <layout>1_TitleScreen</layout>
+        <event-sheet>1_Events_TitleScreen</event-sheet>
+        <event-sheet>00_Events_Pre-Game_Controls</event-sheet>
+        <event-sheet>2_Events_Intro</event-sheet>
+        <event-sheet>3_Events_GameLevel</event-sheet>
+        <event-sheet>4_Events_LoseState</event-sheet>
+        <event-sheet>5_Events_WinState</event-sheet>
+        <event-sheet>01_Events_Main_Controls</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -19,5 +26,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1" />
+    <families-expanded root="1">
+        <family expanded="1" name="Bullets" />
+    </families-expanded>
 </c2uistate>
