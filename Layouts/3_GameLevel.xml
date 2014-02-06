@@ -47,6 +47,44 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Enemy" uid="12">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <EnemyHealth>300</EnemyHealth>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-227</x>
+                        <y>149</y>
+                        <z>0</z>
+                        <width>58.218399048</width>
+                        <height>97.585128784</height>
+                        <depth>0</depth>
+                        <hotspotX>0.504761934</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -180,6 +218,35 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Ground" uid="11">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>-58</y>
+                        <z>0</z>
+                        <width>48000</width>
+                        <height>65</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -204,23 +271,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <instance-variables>
-                        <BulletSpeed>1000</BulletSpeed>
-                    </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Bullet2">
-                            <properties>
-                                <speed>400</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>No</set-angle>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>1200</speed>
+                                <speed>800</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
@@ -232,14 +286,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>113</x>
-                        <y>-62</y>
+                        <x>112</x>
+                        <y>-137</y>
                         <z>0</z>
                         <width>130</width>
                         <height>130</height>
                         <depth>0</depth>
-                        <hotspotX>0.969230771</hotspotX>
-                        <hotspotY>0.969230771</hotspotY>
+                        <hotspotX>0.536585391</hotspotX>
+                        <hotspotY>0.461538464</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -251,23 +305,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <instance-variables>
-                        <BulletSpeed>1000</BulletSpeed>
-                    </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Bullet2">
-                            <properties>
-                                <speed>400</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>No</set-angle>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>1200</speed>
+                                <speed>800</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
@@ -285,8 +326,8 @@
                         <width>130</width>
                         <height>130</height>
                         <depth>0</depth>
-                        <hotspotX>0.969230771</hotspotX>
-                        <hotspotY>0.969230771</hotspotY>
+                        <hotspotX>0.519230783</hotspotX>
+                        <hotspotY>0.514285743</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -300,6 +341,7 @@
                     </properties>
                     <instance-variables>
                         <Is_Shooting>false</Is_Shooting>
+                        <PlayerHealth>500</PlayerHealth>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -307,7 +349,7 @@
                                 <max-speed>400</max-speed>
                                 <acceleration>800</acceleration>
                                 <deceleration>1500</deceleration>
-                                <jump-strength>1200</jump-strength>
+                                <jump-strength>1100</jump-strength>
                                 <gravity>3000</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
                                 <default-controls>No</default-controls>
@@ -319,13 +361,13 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>55</x>
-                        <y>642</y>
+                        <y>663</y>
                         <z>0</z>
-                        <width>34.261482239</width>
-                        <height>48.219860077</height>
+                        <width>50.757751465</width>
+                        <height>79.097488403</height>
                         <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.502673805</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -348,7 +390,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>62.614807129</x>
+                        <x>13</x>
                         <y>595</y>
                         <z>0</z>
                         <width>84</width>
