@@ -69,6 +69,15 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.25</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -77,10 +86,10 @@
                         <y>149</y>
                         <z>0</z>
                         <width>58.218399048</width>
-                        <height>97.585128784</height>
+                        <height>97.030670166</height>
                         <depth>0</depth>
                         <hotspotX>0.504761934</hotspotX>
-                        <hotspotY>1</hotspotY>
+                        <hotspotY>1.005714297</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -131,12 +140,39 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Platform" uid="4">
+                <instance type="Ground" uid="11">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>-58</y>
+                        <z>0</z>
+                        <width>48000</width>
+                        <height>65</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TiledPlatform" uid="13">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Jumpthru">
@@ -160,12 +196,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Platform" uid="5">
+                <instance type="TiledPlatform" uid="4">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <hotspot>Top-left</hotspot>
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Jumpthru">
@@ -180,7 +214,7 @@
                         <x>1148</x>
                         <y>324</y>
                         <z>0</z>
-                        <width>46888</width>
+                        <width>47594</width>
                         <height>57</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -189,12 +223,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Platform" uid="6">
+                <instance type="TiledPlatform" uid="5">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <hotspot>Top-left</hotspot>
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Jumpthru">
@@ -209,37 +241,8 @@
                         <x>1148</x>
                         <y>142</y>
                         <z>0</z>
-                        <width>46888</width>
+                        <width>47594</width>
                         <height>57</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Ground" uid="11">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>0</x>
-                        <y>-58</y>
-                        <z>0</z>
-                        <width>48000</width>
-                        <height>65</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -341,7 +344,7 @@
                     </properties>
                     <instance-variables>
                         <Is_Shooting>false</Is_Shooting>
-                        <PlayerHealth>500</PlayerHealth>
+                        <PlayerHealth>300</PlayerHealth>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -356,18 +359,27 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>55</x>
-                        <y>663</y>
+                        <y>701</y>
                         <z>0</z>
                         <width>50.757751465</width>
                         <height>79.097488403</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.502673805</hotspotY>
+                        <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
