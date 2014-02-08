@@ -4,5 +4,433 @@
     <name>3_Events_GameLevel</name>
     <events>
         <include>01_Events_Main_Controls</include>
+        <event-group description="" sid="5776695138634966" title="Player Events">
+            <sub-events>
+                <event-block sid="930097227342318">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="6613198148848888" type="System" />
+                        <condition id="-3" name="Is on-screen" sid="9880699854510523" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="7399054720038625" type="Player">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="613876798060584" type="PlayerOffset">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="1079494129766806" type="PlayerOffset">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3294474919443866">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="4609146373552951" type="Player" />
+                        <condition id="-7" name="Compare instance variable" sid="6573899808811828" type="Player">
+                            <param id="0" name="Instance variable">PlayerHealth</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1169997631178022" type="Player">
+                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6508563900911825">
+                    <conditions>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="7920747371804776" type="Player" />
+                        <condition id="-7" name="Compare instance variable" sid="2374024801520334" type="Player">
+                            <param id="0" name="Instance variable">PlayerHealth</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="5180409033963807" type="Player">
+                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2486424167374359">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="1768148572577981" type="Player" />
+                        <condition id="-7" name="Compare instance variable" sid="5207993130480911" type="Player">
+                            <param id="0" name="Instance variable">PlayerHealth</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6849816342038906" type="Player">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="9739324929094572">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="6259686630114954" type="Player" />
+                        <condition id="-8" name="Is boolean instance variable set" sid="5149812759378243" type="Player">
+                            <param id="0" name="Instance variable">Is_Shooting</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7434521300713972" type="Player">
+                            <param id="0" name="Animation">&quot;Shoot&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8977442038955393">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="1389686249431752" type="PlayerBullets" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="1232033702847717" type="PlayerBullets">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3595301714508346">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="7072478750810591" type="PlayerBullets" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="1444530343107894" type="PlayerBullets" />
+                    </actions>
+                </event-block>
+                <event-block sid="4961403483666407">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="9708403206069155" type="CandyBullet" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="7969602818092126" type="CandyBullet">
+                            <param id="0" name="Width">20</param>
+                            <param id="1" name="Height">13</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9402322754216981">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="4414117984894801" type="RainbowBullet" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="126253080724746" type="RainbowBullet">
+                            <param id="0" name="Width">26</param>
+                            <param id="1" name="Height">14</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6896261940896508">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2313197106273347" type="Player">
+                            <param id="0" name="Object">EnemyBullets</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="3985958550342938" type="PlayerOffset">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="826798375407837" type="EnemyBullets" />
+                        <action id="4" name="Set animation" sid="5057860601528171" type="Player">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="5359491103998095" type="Player">
+                            <param id="0" name="Instance variable">PlayerHealth</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="5069095815099592" type="System">
+                            <param id="0" name="Seconds">0.25</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="6463629179804673" type="Player">
+                            <param id="0" name="Animation">&quot;Walking&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2644982223337944">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8971837411160305" type="Player">
+                            <param id="0" name="Object">CandyPickup</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="7848480353403226" type="Player">
+                            <param id="0" name="Instance variable">CandyBulletCount</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="5290217597388453" type="CandyPickup" />
+                    </actions>
+                </event-block>
+                <event-block sid="5267889584972581">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="201146366650052" type="Player">
+                            <param id="0" name="Object">RainbowPickup</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="7435529092971083" type="Player">
+                            <param id="0" name="Instance variable">RainbowBulletCount</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="5207707027878083" type="RainbowPickup" />
+                    </actions>
+                </event-block>
+                <event-block sid="6438569187348239">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="5513422337909672" type="Player" />
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="3236640839407508" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="3327624253529427" type="Player">
+                            <param id="0" name="Instance variable">PlayerHealth</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="1683581340368664" type="System">
+                            <param id="0" name="Layout">4_LoseState</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3206588824526974">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6240041579852042" type="Player">
+                            <param id="0" name="Instance variable">PlayerHealth</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="758817964169695" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="0" name="Set ignoring input" sid="5540334274252482" type="Player">
+                            <param id="0" name="Input">1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="7655791346040137" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="5024070096443105" type="Player">
+                            <param id="0" name="Animation">&quot;Dying&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="4945283171986235" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="4059316720644943" type="System">
+                            <param id="0" name="Layout">4_LoseState</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="3284885343054906" title="Enemy Events">
+            <sub-events>
+                <comment>Enemy Bullets</comment>
+                <event-block disabled="1" sid="6473319600866784">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="3190518592754492" type="System">
+                            <param id="0" name="Interval (seconds)">random(2) + 1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7288853480885233" type="Enemy">
+                            <param id="0" name="Instance variable">EnemyHealth</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="1238988352876414" type="Enemy">
+                            <param id="0" name="Object">EnemyBullet</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7389703702887003">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="4269558790653592" type="EnemyBullet" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="6725296700037563" type="EnemyBullet" />
+                    </actions>
+                </event-block>
+                <comment>Collision</comment>
+                <event-block sid="8060133221087644">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="7862190035851583" type="Enemy">
+                            <param id="0" name="Object">CandyBullet</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4910114404946951" type="Enemy">
+                            <param id="0" name="Instance variable">EnemyHealth</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="8195769569075498" type="CandyBullet" />
+                        <action id="-11" name="Add to" sid="1453916486325816" type="Enemy">
+                            <param id="0" name="Instance variable">EnemyHealth</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1008928670140419" type="Enemy">
+                            <param id="0" name="Animation">&quot;HealthUp&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2794531616668136" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1712692720760536" type="Enemy">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2317035405734433">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="6107538514008398" type="Enemy">
+                            <param id="0" name="Object">RainbowBullet</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="6789758320827376" type="Enemy">
+                            <param id="0" name="Instance variable">EnemyHealth</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="7764569860381405" type="RainbowBullet" />
+                        <action id="-12" name="Subtract from" sid="3809457227053149" type="Enemy">
+                            <param id="0" name="Instance variable">EnemyHealth</param>
+                            <param id="1" name="Value">300</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="8805650931601314" type="Enemy">
+                            <param id="0" name="Object">RainbowPickup</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4449808320166189">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1289371837063583" type="Enemy">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7390981961648948" type="Enemy">
+                            <param id="0" name="Instance variable">EnemyHealth</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="334507663081126" type="Player">
+                            <param id="0" name="Instance variable">PlayerHealth</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="1310389327159047" type="PlayerOffset">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="3555522508113891" type="Player">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="5536815468711678" type="Player">
+                            <param id="0" name="Instance variable">PlayerHealth</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2274635906593029" type="System">
+                            <param id="0" name="Seconds">0.25</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="5601040111682128" type="Player">
+                            <param id="0" name="Animation">&quot;Walking&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9119855126233763">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7926454456880144" type="Enemy">
+                            <param id="0" name="Instance variable">EnemyHealth</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="5523923626917264" type="Enemy">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="4160867751570274" type="Enemy" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="1990243187300485" title="Citizen Events">
+            <sub-events>
+                <event-block sid="2514430907756118">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="4004002082097293" type="Citizens">
+                            <param id="0" name="Object">CandyBullet</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5113344800931263" type="Citizens">
+                            <param id="0" name="Instance variable">CitizenHealth</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="1502716071532276" type="Citizens">
+                            <param id="0" name="Animation">&quot;Happy&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="1764329246926324" type="CandyBullet" />
+                        <action id="-12" name="Subtract from" sid="6923473071802369" type="Citizens">
+                            <param id="0" name="Instance variable">CitizenHealth</param>
+                            <param id="1" name="Value">300</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="4672088954086428" type="Citizens">
+                            <param id="0" name="Animation">&quot;Happy&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="1767368943389186" type="Citizens">
+                            <param id="0" name="Object">CandyPickup</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">2</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="6293105971881477" type="Citizens" />
+                    </actions>
+                </event-block>
+                <event-block sid="9291110976263096">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="4763356001583093" type="Citizens">
+                            <param id="0" name="Object">RainbowBullet</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="3878301994580274" type="Citizens">
+                            <param id="0" name="Instance variable">CitizenHealth</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="5482023810531685" type="RainbowBullet" />
+                        <action id="-12" name="Subtract from" sid="3960449104665427" type="Citizens">
+                            <param id="0" name="Instance variable">CitizenHealth</param>
+                            <param id="1" name="Value">300</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="5575242949582737" type="Citizens">
+                            <param id="0" name="Animation">&quot;Dying&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="1050293954329484" type="Citizens" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

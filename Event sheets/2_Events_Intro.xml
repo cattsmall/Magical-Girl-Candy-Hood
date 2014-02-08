@@ -2,5 +2,126 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>2_Events_Intro</name>
-    <events />
+    <events>
+        <comment>Hover Actions</comment>
+        <event-block sid="1202015851065318">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="7530897426951754" type="Mouse">
+                    <param id="0" name="Object">InstructionsButton</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="3025872887747694" type="InstructionsButton">
+                    <param id="0" name="Animation">&quot;1_Next&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="2438077399294071" type="InstructionsButton">
+                    <param id="0" name="Animation">&quot;2_Next_Hover&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="5475506001226592" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5925892594130368">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="2226162574363538" type="Mouse">
+                    <param id="0" name="Object">InstructionsButton</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="9704173171676287" type="InstructionsButton">
+                    <param id="0" name="Animation">&quot;3_Play&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="8839521760941616" type="InstructionsButton">
+                    <param id="0" name="Animation">&quot;4_Play_Hover&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="8538930256029822" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2419897541422067">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="8081253762290833" type="Mouse">
+                    <param id="0" name="Object">InstructionsButton</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="3460701214428979" type="InstructionsButton">
+                    <param id="0" name="Animation">&quot;2_Next_Hover&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1273411514949918" type="InstructionsButton">
+                    <param id="0" name="Animation">&quot;1_Next&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="361371718403123" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7922264778479088">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="7589738668522571" type="Mouse">
+                    <param id="0" name="Object">InstructionsButton</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="2632795337836732" type="InstructionsButton">
+                    <param id="0" name="Animation">&quot;4_Play_Hover&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1792209801792096" type="InstructionsButton">
+                    <param id="0" name="Animation">&quot;3_Play&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="1710486746029549" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Button Clicks</comment>
+        <event-block sid="7513709278062285">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="4259335127366719" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">InstructionsButton</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="2449449623993644" type="InstructionsButton">
+                    <param id="0" name="Animation">&quot;2_Next_Hover&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="8596668700733078" type="Instructions">
+                    <param id="0" name="Animation">&quot;Slide2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="9603354141192269" type="InstructionsButton">
+                    <param id="0" name="Animation">&quot;3_Play&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3147141779303894">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="164849888762749" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">InstructionsButton</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="6396950722272098" type="InstructionsButton">
+                    <param id="0" name="Animation">&quot;4_Play_Hover&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="7883878444911625" type="System">
+                    <param id="0" name="Layout">3_GameLevel</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="8590096784723168" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>

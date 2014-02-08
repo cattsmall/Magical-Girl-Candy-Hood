@@ -2,5 +2,55 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>1_Events_TitleScreen</name>
-    <events />
+    <events>
+        <event-block sid="9746687223267119">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="226119006620985" type="Mouse">
+                    <param id="0" name="Object">TitleButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1854278315095365" type="TitleButton">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="700744441408551" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6959915333368553">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="6039718372256738" type="Mouse">
+                    <param id="0" name="Object">TitleButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="6712838319242286" type="TitleButton">
+                    <param id="0" name="Animation">&quot;Hover&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="7516719141541209" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5590260964351159">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="3832975475688388" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">TitleButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="4383526008505994" type="System">
+                    <param id="0" name="Layout">2_Intro</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="7396683767615297" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>
