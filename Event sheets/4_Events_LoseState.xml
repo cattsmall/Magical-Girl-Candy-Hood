@@ -2,5 +2,106 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>4_Events_LoseState</name>
-    <events />
+    <events>
+        <comment>Home</comment>
+        <event-block sid="4410005558800352">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="2552185258528811" type="Mouse">
+                    <param id="0" name="Object">GameOverButton_Home</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="534626033446581" type="GameOverButton_Home">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="1269618832794714" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8872778918878332">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="1289562009947951" type="Mouse">
+                    <param id="0" name="Object">GameOverButton_Home</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="7060366510513173" type="GameOverButton_Home">
+                    <param id="0" name="Animation">&quot;Hover&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="6116447030564125" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9097085953774318">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="6956224665037476" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">GameOverButton_Home</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="7723308244950897" type="System">
+                    <param id="0" name="Layout">1_TitleScreen</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="9184258377243409" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Retry</comment>
+        <event-block sid="3993527043368816">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="6004820284698269" type="Mouse">
+                    <param id="0" name="Object">GameOverButton_Retry</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="2094974589082499" type="GameOverButton_Retry">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="5275696246214931" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9145006024881535">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="2103615299235209" type="Mouse">
+                    <param id="0" name="Object">GameOverButton_Retry</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="2631870227550961" type="GameOverButton_Retry">
+                    <param id="0" name="Animation">&quot;Hover&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="6596969403248236" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2847255522113128">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="2763136410716887" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">GameOverButton_Retry</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="1522915326194286" type="System">
+                    <param id="0" name="Layout">3_GameLevel</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="6681570051858575" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>
