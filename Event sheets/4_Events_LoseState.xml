@@ -103,5 +103,30 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="4834176731023497" title="Game Over Music &amp; Sound">
+            <sub-events>
+                <event-block sid="4333088210874629">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="3013558777734114" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="5663777260918612" type="Audio">
+                            <param id="0" name="Audio file">GameOver</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5948899006167571">
+                    <conditions>
+                        <condition id="-3" name="On end of layout" sid="5739175441159194" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="33" name="Stop all" sid="4997838862182072" type="Audio" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

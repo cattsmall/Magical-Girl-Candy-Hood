@@ -10,9 +10,10 @@
     <unique-id>2dqqx9hj9d1c9</unique-id>
     <saved-with-version>15802</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
@@ -746,17 +747,17 @@
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2708423398471495" speed="5">
                     <frame duration="1" hotspotX="0.506329" hotspotY="0.993289">
-                        <image-point name="Spawn" x="0.506329" y="0.302013" />
+                        <image-point name="Spawn" x="0.518987" y="0.597315" />
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Happy" pingpong="0" repeatcount="1" repeatto="0" sid="8935301967932242" speed="5">
                     <frame duration="1" hotspotX="0.506494" hotspotY="1">
-                        <image-point name="Spawn" x="0.506494" y="0.5" />
+                        <image-point name="Spawn" x="0.519481" y="0.596154" />
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Dying" pingpong="0" repeatcount="1" repeatto="0" sid="7101035177571599" speed="5">
                     <frame duration="1" hotspotX="0.506494" hotspotY="1">
-                        <image-point name="Spawn" x="0.506494" y="0.5" />
+                        <image-point name="Spawn" x="0.519481" y="0.596154" />
                     </frame>
                 </animation>
             </animation-folder>
@@ -766,17 +767,17 @@
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5892957235695942" speed="5">
                     <frame duration="1" hotspotX="0.506329" hotspotY="0.993289">
-                        <image-point name="Spawn" x="0.506329" y="0.302013" />
+                        <image-point name="Spawn" x="0.518987" y="0.597315" />
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Happy" pingpong="0" repeatcount="1" repeatto="0" sid="2914417052078626" speed="5">
                     <frame duration="1" hotspotX="0.506494" hotspotY="1">
-                        <image-point name="Spawn" x="0.506494" y="0.5" />
+                        <image-point name="Spawn" x="0.519481" y="0.596154" />
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Dying" pingpong="0" repeatcount="1" repeatto="0" sid="490603134899141" speed="5">
                     <frame duration="1" hotspotX="0.506494" hotspotY="1">
-                        <image-point name="Spawn" x="0.506494" y="0.5" />
+                        <image-point name="Spawn" x="0.519481" y="0.596154" />
                     </frame>
                 </animation>
             </animation-folder>
@@ -786,17 +787,17 @@
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6503161183840524" speed="5">
                     <frame duration="1" hotspotX="0.506329" hotspotY="0.993289">
-                        <image-point name="Spawn" x="0.518987" y="0.302013" />
+                        <image-point name="Spawn" x="0.518987" y="0.597315" />
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Happy" pingpong="0" repeatcount="1" repeatto="0" sid="9831033325227323" speed="5">
                     <frame duration="1" hotspotX="0.506494" hotspotY="1">
-                        <image-point name="Spawn" x="0.506494" y="0.5" />
+                        <image-point name="Spawn" x="0.519481" y="0.596154" />
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Dying" pingpong="0" repeatcount="1" repeatto="0" sid="4959823719564007" speed="5">
                     <frame duration="1" hotspotX="0.506494" hotspotY="1">
-                        <image-point name="Spawn" x="0.506494" y="0.5" />
+                        <image-point name="Spawn" x="0.519481" y="0.596154" />
                     </frame>
                 </animation>
             </animation-folder>
@@ -808,13 +809,6 @@
                     <frame duration="1" hotspotX="0" hotspotY="0">
                         <image-point name="Spawn1" x="0.179837" y="0" />
                         <image-point name="Spawn2" x="0.825613" y="-0.00775194" />
-                        <collision-poly>
-                            <point x="0.00544959" y="0.0310078" />
-                            <point x="0.5" y="0" />
-                            <point x="0.995913" y="0.0232558" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Plat2" pingpong="0" repeatcount="1" repeatto="0" sid="6387900228911807" speed="5">
@@ -824,7 +818,7 @@
                         <collision-poly>
                             <point x="0.39433" y="0.276265" />
                             <point x="0.393471" y="0.00194553" />
-                            <point x="0.997423" y="0.00583658" />
+                            <point x="0.997423" y="0.00389105" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                             <point x="0" y="0.274319" />
@@ -835,12 +829,6 @@
                     <frame duration="1" hotspotX="0" hotspotY="0">
                         <image-point name="Spawn1" x="0.180982" y="0" />
                         <image-point name="Spawn2" x="0.825153" y="-0.00840336" />
-                        <collision-poly>
-                            <point x="0.0122699" y="0.0112045" />
-                            <point x="0.990798" y="0.00840336" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Plat4" pingpong="0" repeatcount="1" repeatto="0" sid="9911595995886551" speed="5">
@@ -1059,6 +1047,13 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Audio" sid="1107644654733045">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="TiledBackground2" sid="7966131198219246">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="PlayerBullets" plugin-id="Sprite" sid="9443698752839947">
@@ -1126,9 +1121,43 @@
     <global-instances>
         <global-instance type="Keyboard" uid="8" />
         <global-instance type="Mouse" uid="9" />
+        <global-instance type="Audio" uid="62">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+                <speed-of-sound>5000</speed-of-sound>
+                <doppler-factor>1</doppler-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder expanded="1" />
-    <music-folder expanded="1" />
+    <sounds-folder expanded="1">
+        <file name="Candy.ogg" />
+        <file name="Candy.wav" />
+        <file name="PlayerHit.m4a" />
+        <file name="PlayerHit.ogg" />
+        <file name="PlayerHit.wav" />
+        <file name="Rainbow.m4a" />
+        <file name="Rainbow.ogg" />
+        <file name="Rainbow.wav" />
+    </sounds-folder>
+    <music-folder expanded="1">
+        <file name="GameOver.m4a" />
+        <file name="GameOver.ogg" />
+        <file name="GameOver.wav" />
+        <file name="InGame.m4a" />
+        <file name="InGame.ogg" />
+        <file name="InGame.wav" />
+        <file name="Title.m4a" />
+        <file name="Title.ogg" />
+        <file name="Title.wav" />
+    </music-folder>
     <files-folder expanded="1">
         <file-folder expanded="0" name="Icons">
             <file name="icon-16.png" />
