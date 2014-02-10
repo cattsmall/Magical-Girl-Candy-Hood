@@ -168,6 +168,8 @@
                 <instance-variable name="PlayerHealth" sid="4014243234554343" type="number" />
                 <instance-variable name="CandyBulletCount" sid="706937547872637" type="number" />
                 <instance-variable name="RainbowBulletCount" sid="7143490508498016" type="number" />
+                <instance-variable name="EnemiesKilled" sid="8324118372413857" type="number" />
+                <instance-variable name="CitizensSaved" sid="6709272446958852" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="4168963046969531">
@@ -307,24 +309,35 @@
                     <frame duration="1" hotspotX="0" hotspotY="1">
                         <image-point name="Offset" x="6.40179" y="0.5" />
                         <image-point name="PickupSpawn" x="0.5" y="0.5" />
+                        <image-point name="Bulletspawn" x="0.955357" y="0.464706" />
                     </frame>
                 </animation>
                 <animation framecount="4" loop="0" name="Dying" pingpong="0" repeatcount="1" repeatto="0" sid="1203659816886804" speed="50">
                     <frame duration="5" hotspotX="0" hotspotY="1">
                         <image-point name="Offset" x="6.40179" y="0.5" />
                         <image-point name="PickupSpawn" x="0.5" y="0.5" />
+                        <image-point name="Bulletspawn" x="0.955357" y="0.464706" />
                     </frame>
                     <frame duration="1" hotspotX="0" hotspotY="1">
                         <image-point name="Offset" x="6.4" y="0.5" />
                         <image-point name="PickupSpawn" x="0.5" y="0.5" />
+                        <image-point name="Bulletspawn" x="0.961538" y="0.467391" />
                     </frame>
                     <frame duration="1" hotspotX="0" hotspotY="1">
                         <image-point name="Offset" x="6.40116" y="0.5" />
                         <image-point name="PickupSpawn" x="0.5" y="0.5" />
+                        <image-point name="Bulletspawn" x="0.959302" y="0.468254" />
                     </frame>
                     <frame duration="30" hotspotX="0" hotspotY="1">
                         <image-point name="Offset" x="6.39896" y="0.507463" />
                         <image-point name="PickupSpawn" x="0.502591" y="0.507463" />
+                        <image-point name="Bulletspawn" x="0.958549" y="0.462687" />
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Win" pingpong="0" repeatcount="1" repeatto="0" sid="4921668113038459" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="1">
+                        <image-point name="Offset" x="6.40323" y="0.505102" />
+                        <image-point name="Bulletspawn" x="0.959677" y="0.464286" />
                     </frame>
                 </animation>
             </animation-folder>
@@ -541,7 +554,7 @@
                     </frame>
                 </animation>
                 <animation framecount="5" loop="1" name="Walking" pingpong="0" repeatcount="1" repeatto="0" sid="7418076968935057" speed="10">
-                    <frame duration="1" hotspotX="0.504762" hotspotY="1.00571">
+                    <frame duration="1" hotspotX="0.504762" hotspotY="1">
                         <image-point name="EnemyGun" x="0.0285714" y="0.44" />
                         <image-point name="PickupSpawn" x="0.504762" y="0.502857" />
                         <collision-poly>
@@ -554,7 +567,7 @@
                             <point x="0.0282154" y="0.491428" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.504673" hotspotY="1.00571">
+                    <frame duration="1" hotspotX="0.504673" hotspotY="1">
                         <image-point name="EnemyGun" x="0.0280374" y="0.44" />
                         <image-point name="PickupSpawn" x="0.504673" y="0.502857" />
                         <collision-poly>
@@ -567,7 +580,7 @@
                             <point x="0.0282154" y="0.491428" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.505376" hotspotY="1.00571">
+                    <frame duration="1" hotspotX="0.505376" hotspotY="1">
                         <image-point name="EnemyGun" x="0.0322581" y="0.44" />
                         <image-point name="PickupSpawn" x="0.505376" y="0.502857" />
                         <collision-poly>
@@ -580,7 +593,7 @@
                             <point x="0.0282154" y="0.491428" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1.00571">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
                         <image-point name="EnemyGun" x="0.0238095" y="0.44" />
                         <image-point name="PickupSpawn" x="0.5" y="0.502857" />
                         <collision-poly>
@@ -593,7 +606,7 @@
                             <point x="0.0282154" y="0.491428" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1.00571">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
                         <image-point name="EnemyGun" x="0.0306122" y="0.44" />
                         <image-point name="PickupSpawn" x="0.5" y="0.502857" />
                         <collision-poly>
@@ -608,7 +621,7 @@
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="8642809435887457" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1.00571">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
                         <image-point name="EnemyGun" x="0.0238095" y="0.44" />
                         <image-point name="PickupSpawn" x="0.5" y="0.502857" />
                         <collision-poly>
@@ -623,18 +636,18 @@
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="HealthUp" pingpong="0" repeatcount="1" repeatto="0" sid="188710290222646" speed="5">
-                    <frame duration="1" hotspotX="0.507937" hotspotY="1.00575">
-                        <image-point name="EnemyGun" x="0.031746" y="0.436782" />
-                        <image-point name="PickupSpawn" x="0.507937" y="0.5" />
+                    <frame duration="1" hotspotX="0.508621" hotspotY="1">
+                        <image-point name="EnemyGun" x="0.0258621" y="0.4375" />
+                        <image-point name="PickupSpawn" x="0.508621" y="0.5" />
                         <collision-poly>
-                            <point x="0.047619" y="0.0229885" />
-                            <point x="0.587302" y="0.0344827" />
-                            <point x="0.920635" y="0.0229885" />
-                            <point x="0.888889" y="0.494253" />
-                            <point x="0.952381" y="1" />
-                            <point x="0.174603" y="1" />
-                            <point x="0.206349" y="0.839081" />
-                            <point x="0.174603" y="0.494253" />
+                            <point x="0.491379" y="0.232143" />
+                            <point x="0.465517" y="0.00892857" />
+                            <point x="0.862069" y="0.0178571" />
+                            <point x="0.741379" y="0.46875" />
+                            <point x="0.758621" y="0.866071" />
+                            <point x="0.465517" y="0.995536" />
+                            <point x="0.439655" y="0.732143" />
+                            <point x="0.0603448" y="0.46875" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -981,7 +994,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="GameOverButton_Home" sid="7411463188836316">
+        <object-type name="Button_Home" sid="7411463188836316">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="328087019984131" speed="5">
@@ -1014,7 +1027,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="GameOverButton_Retry" sid="3424799903660063">
+        <object-type name="Button_Retry" sid="3424799903660063">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4419575301611312" speed="5">
@@ -1053,6 +1066,163 @@
         <object-type name="TiledBackground2" sid="7966131198219246">
             <plugin id="TiledBg" />
             <texture />
+        </object-type>
+        <object-type name="GUI_CitizenCountText" sid="8879092831235239">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="GUI_CitizenIcon" sid="6511036474053106">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9216001603661561" speed="5">
+                    <frame duration="1" hotspotX="0.508772" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.122807" y="0.152174" />
+                            <point x="0.877193" y="0.152174" />
+                            <point x="0.894737" y="0.5" />
+                            <point x="0.842105" y="0.804348" />
+                            <point x="0.491228" y="0.956522" />
+                            <point x="0.140351" y="0.826087" />
+                            <point x="0.0877193" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GUI_CandyIcon" sid="3420118094880095">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2952977021232209" speed="5">
+                    <frame duration="1" hotspotX="0.386364" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0681818" y="0.433333" />
+                            <point x="0.386364" y="0.1" />
+                            <point x="0.840909" y="0.233333" />
+                            <point x="0.931818" y="0.5" />
+                            <point x="0.795455" y="0.7" />
+                            <point x="0.386364" y="0.9" />
+                            <point x="0.0909091" y="0.533333" />
+                            <point x="0.0909091" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GUI_CandyCountText" sid="2779306704703512">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="GUI_RainbowIcon" sid="3996266775260042">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3858309242612602" speed="5">
+                    <frame duration="1" hotspotX="0.396552" hotspotY="0.594595">
+                        <collision-poly>
+                            <point x="0.189655" y="0.297297" />
+                            <point x="0.5" y="0.0540541" />
+                            <point x="0.793103" y="0.324324" />
+                            <point x="0.87931" y="0.594595" />
+                            <point x="0.810345" y="0.891892" />
+                            <point x="0.5" y="0.432432" />
+                            <point x="0.172414" y="0.918919" />
+                            <point x="0.12069" y="0.594595" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GUI_RainbowCountText" sid="4036836806905138">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="GUI_PlayerHealthGauge" sid="4651173818174563">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8887584780593454" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.516129" />
+                </animation>
+                <animation framecount="1" loop="0" name="Mid" pingpong="0" repeatcount="1" repeatto="0" sid="6945914886920263" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.516129" />
+                </animation>
+                <animation framecount="1" loop="0" name="Low" pingpong="0" repeatcount="1" repeatto="0" sid="530627531459318" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.516129" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GUI_PlayerHealthIcon" sid="2661708512574618">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9352932618509329" speed="5">
+                    <frame duration="1" hotspotX="0.516129" hotspotY="0.533333">
+                        <collision-poly>
+                            <point x="0.129032" y="0.133333" />
+                            <point x="0.870968" y="0.133333" />
+                            <point x="0.903226" y="0.5" />
+                            <point x="0.741935" y="0.733333" />
+                            <point x="0.483871" y="0.933333" />
+                            <point x="0.258065" y="0.733333" />
+                            <point x="0.0967742" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WinFlag" sid="8475768640056197">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="277829903774341" speed="5">
+                    <frame duration="1" hotspotX="0.495763" hotspotY="0.501272">
+                        <collision-poly>
+                            <point x="0.830509" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.830509" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WinLeaderboard" sid="3945621542209389">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2090130689968681" speed="5">
+                    <frame duration="1" hotspotX="0.502171" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0101302" y="0.0152838" />
+                            <point x="0.98987" y="0.0152838" />
+                            <point x="0.98987" y="0.984716" />
+                            <point x="0.0101302" y="0.984716" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="win" sid="7349522177747776">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7525306449802123" speed="5">
+                    <frame duration="1" hotspotX="0.502703" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.378378" y="0.299145" />
+                            <point x="0.497297" y="0.205128" />
+                            <point x="0.6" y="0.316239" />
+                            <point x="0.632432" y="0.5" />
+                            <point x="0.524324" y="0.623932" />
+                            <point x="0.497297" y="1" />
+                            <point x="0.259459" y="0.794872" />
+                            <point x="0.027027" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WinScoreText" sid="3410625826899012">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="EnemySpikes" sid="2750515332526243">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3020378435110463" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
@@ -1146,8 +1316,11 @@
         <file name="Rainbow.m4a" />
         <file name="Rainbow.ogg" />
         <file name="Rainbow.wav" />
+        <file name="YouWin.m4a" />
+        <file name="YouWin.ogg" />
+        <file name="YouWin.wav" />
     </sounds-folder>
-    <music-folder expanded="1">
+    <music-folder expanded="0">
         <file name="GameOver.m4a" />
         <file name="GameOver.ogg" />
         <file name="GameOver.wav" />
@@ -1157,8 +1330,11 @@
         <file name="Title.m4a" />
         <file name="Title.ogg" />
         <file name="Title.wav" />
+        <file name="WinState.m4a" />
+        <file name="WinState.ogg" />
+        <file name="WinState.wav" />
     </music-folder>
-    <files-folder expanded="1">
+    <files-folder expanded="0">
         <file-folder expanded="0" name="Icons">
             <file name="icon-16.png" />
             <file name="icon-32.png" />

@@ -2,5 +2,143 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>5_Events_WinState</name>
-    <events />
+    <events>
+        <comment>Home</comment>
+        <event-block sid="7146543844356347">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="5346947079046879" type="Mouse">
+                    <param id="0" name="Object">Button_Home</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="448938726774519" type="Button_Home">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="7174723849304327" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1053573872008811">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="5323951319436592" type="Mouse">
+                    <param id="0" name="Object">Button_Home</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="111315631548613" type="Button_Home">
+                    <param id="0" name="Animation">&quot;Hover&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="5032416562405002" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3158307986393372">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="7149929141650002" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Button_Home</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="226076132066782" type="System">
+                    <param id="0" name="Layout">1_TitleScreen</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="8712285495012803" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Retry</comment>
+        <event-block sid="8111247147660704">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="4643878649897935" type="Mouse">
+                    <param id="0" name="Object">Button_Retry</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="7115541133240111" type="Button_Retry">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="794215103423614" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4129069149603613">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="2440719326556054" type="Mouse">
+                    <param id="0" name="Object">Button_Retry</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1749434742873147" type="Button_Retry">
+                    <param id="0" name="Animation">&quot;Hover&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="6448837481408015" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3881330345721061">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="2471954447758462" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Button_Retry</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="9323759208082456" type="System">
+                    <param id="0" name="Layout">3_GameLevel</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="5853927798572119" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="6818323610722674" title="Win State Layout Events">
+            <sub-events>
+                <event-block sid="4333088210874629">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="3013558777734114" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="5663777260918612" type="Audio">
+                            <param id="0" name="Audio file">WinState</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="326362787642182" type="GUI_CitizenCountText">
+                            <param id="0" name="Text">&quot;You saved &quot; &amp; TotalCitizensSaved &amp; &quot; citizens.&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="9730656314014326" type="GUI_CandyCountText">
+                            <param id="0" name="Text">&quot;You finished with &quot; &amp; TotalCandyBulletCount &amp; &quot; candies.&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="9760933589728781" type="GUI_RainbowCountText">
+                            <param id="0" name="Text">&quot;You finished with &quot; &amp; TotalRainbowBulletCount &amp; &quot; rainbows.&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4429634298300668" type="WinScoreText">
+                            <param id="0" name="Text">TotalCitizensSaved + TotalCandyBulletCount + TotalRainbowBulletCount &amp; &quot; points&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5948899006167571">
+                    <conditions>
+                        <condition id="-3" name="On end of layout" sid="5739175441159194" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="33" name="Stop all" sid="4997838862182072" type="Audio" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
 </c2eventsheet>

@@ -65,7 +65,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GameOverButton_Home" uid="60">
+                <instance type="Button_Home" uid="60">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -87,7 +87,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GameOverButton_Retry" uid="61">
+                <instance type="Button_Retry" uid="61">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

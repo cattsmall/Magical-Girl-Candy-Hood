@@ -7,11 +7,11 @@
         <event-block sid="4410005558800352">
             <conditions>
                 <condition id="7" inverted="1" name="Cursor is over object" sid="2552185258528811" type="Mouse">
-                    <param id="0" name="Object">GameOverButton_Home</param>
+                    <param id="0" name="Object">Button_Home</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="534626033446581" type="GameOverButton_Home">
+                <action id="4" name="Set animation" sid="534626033446581" type="Button_Home">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -23,11 +23,11 @@
         <event-block sid="8872778918878332">
             <conditions>
                 <condition id="7" name="Cursor is over object" sid="1289562009947951" type="Mouse">
-                    <param id="0" name="Object">GameOverButton_Home</param>
+                    <param id="0" name="Object">Button_Home</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="7060366510513173" type="GameOverButton_Home">
+                <action id="4" name="Set animation" sid="7060366510513173" type="Button_Home">
                     <param id="0" name="Animation">&quot;Hover&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -41,7 +41,7 @@
                 <condition id="6" name="On object clicked" sid="6956224665037476" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
                     <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">GameOverButton_Home</param>
+                    <param id="2" name="Object clicked">Button_Home</param>
                 </condition>
             </conditions>
             <actions>
@@ -57,11 +57,11 @@
         <event-block sid="3993527043368816">
             <conditions>
                 <condition id="7" inverted="1" name="Cursor is over object" sid="6004820284698269" type="Mouse">
-                    <param id="0" name="Object">GameOverButton_Retry</param>
+                    <param id="0" name="Object">Button_Retry</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="2094974589082499" type="GameOverButton_Retry">
+                <action id="4" name="Set animation" sid="2094974589082499" type="Button_Retry">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -73,11 +73,11 @@
         <event-block sid="9145006024881535">
             <conditions>
                 <condition id="7" name="Cursor is over object" sid="2103615299235209" type="Mouse">
-                    <param id="0" name="Object">GameOverButton_Retry</param>
+                    <param id="0" name="Object">Button_Retry</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="2631870227550961" type="GameOverButton_Retry">
+                <action id="4" name="Set animation" sid="2631870227550961" type="Button_Retry">
                     <param id="0" name="Animation">&quot;Hover&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -91,7 +91,7 @@
                 <condition id="6" name="On object clicked" sid="2763136410716887" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
                     <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">GameOverButton_Retry</param>
+                    <param id="2" name="Object clicked">Button_Retry</param>
                 </condition>
             </conditions>
             <actions>
