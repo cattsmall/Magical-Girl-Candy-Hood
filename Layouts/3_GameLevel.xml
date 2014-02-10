@@ -750,7 +750,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>11793</x>
+                        <x>11628</x>
                         <y>261</y>
                         <z>0</z>
                         <width>287</width>
@@ -3401,7 +3401,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>11965</x>
+                        <x>11800</x>
                         <y>260</y>
                         <z>0</z>
                         <width>40.041648865</width>
