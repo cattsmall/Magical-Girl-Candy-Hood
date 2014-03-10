@@ -129,93 +129,119 @@
         </event-group>
         <event-group description="" sid="1541275817107836" title="Mouse Controls">
             <sub-events>
-                <event-block sid="2988884189995982">
+                <event-block any="1" sid="2988884189995982">
                     <conditions>
                         <condition id="0" name="On click" sid="5274187753241398" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
                             <param id="1" name="Click type">0</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="8418633065156638" type="Player">
-                            <param id="0" name="Instance variable">CandyBulletCount</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
+                        <condition id="0" name="On key pressed" sid="4113686128649318" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="8112342904535385" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="2763644814783278" type="Player">
-                            <param id="0" name="Object">CandyBullet</param>
-                            <param id="1" name="Layer">3</param>
-                            <param id="2" name="Image point">2</param>
-                        </action>
-                        <action id="0" name="Play" sid="8159614430336161" type="Audio">
-                            <param id="0" name="Audio file">Candy</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                        <action id="-12" name="Subtract from" sid="6835891031071101" type="Player">
-                            <param id="0" name="Instance variable">CandyBulletCount</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Set text" sid="858546290492832" type="GUI_CandyCountText">
-                            <param id="0" name="Text">Player.CandyBulletCount</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="8424865561720926" type="Player">
-                            <param id="0" name="Instance variable">Is_Shooting</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="8885566273307511" type="System">
-                            <param id="0" name="Seconds">0.25</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="6479672120886099" type="Player">
-                            <param id="0" name="Instance variable">Is_Shooting</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8850653027233169">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1212500799659562" type="Player">
+                                    <param id="0" name="Instance variable">CandyBulletCount</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="5466205364103597" type="Player">
+                                    <param id="0" name="Object">CandyBullet</param>
+                                    <param id="1" name="Layer">3</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                                <action id="0" name="Play" sid="2626863966016769" type="Audio">
+                                    <param id="0" name="Audio file">Candy</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="6769621899689604" type="Player">
+                                    <param id="0" name="Instance variable">CandyBulletCount</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="7804475414119284" type="GUI_CandyCountText">
+                                    <param id="0" name="Text">Player.CandyBulletCount</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="9511890736885064" type="Player">
+                                    <param id="0" name="Instance variable">Is_Shooting</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="884822991116861" type="System">
+                                    <param id="0" name="Seconds">0.25</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="3197259132320524" type="Player">
+                                    <param id="0" name="Instance variable">Is_Shooting</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="2882700379268304">
+                <event-block any="1" sid="2882700379268304">
                     <conditions>
                         <condition id="0" name="On click" sid="9737509637171633" type="Mouse">
                             <param id="0" name="Mouse button">2</param>
                             <param id="1" name="Click type">0</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="8179630047897379" type="Player">
-                            <param id="0" name="Instance variable">RainbowBulletCount</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
+                        <condition id="0" name="On key pressed" sid="6266284204602839" type="Keyboard">
+                            <param id="0" name="Key">68 (D)</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="7773097006211577" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="5038121081519642" type="Player">
-                            <param id="0" name="Object">RainbowBullet</param>
-                            <param id="1" name="Layer">3</param>
-                            <param id="2" name="Image point">2</param>
-                        </action>
-                        <action id="0" name="Play" sid="4427514241830402" type="Audio">
-                            <param id="0" name="Audio file">Rainbow</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                        <action id="-12" name="Subtract from" sid="3290766119884511" type="Player">
-                            <param id="0" name="Instance variable">RainbowBulletCount</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Set text" sid="8619123225696376" type="GUI_RainbowCountText">
-                            <param id="0" name="Text">Player.RainbowBulletCount</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="2349300064632944" type="Player">
-                            <param id="0" name="Instance variable">Is_Shooting</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="3988128933549481" type="System">
-                            <param id="0" name="Seconds">0.25</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="8228007637355046" type="Player">
-                            <param id="0" name="Instance variable">Is_Shooting</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2389055031332582">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3656527584536644" type="Player">
+                                    <param id="0" name="Instance variable">RainbowBulletCount</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="266897177262267" type="Player">
+                                    <param id="0" name="Object">RainbowBullet</param>
+                                    <param id="1" name="Layer">3</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                                <action id="0" name="Play" sid="8406616982653023" type="Audio">
+                                    <param id="0" name="Audio file">Rainbow</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="9313442166335455" type="Player">
+                                    <param id="0" name="Instance variable">RainbowBulletCount</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="451269106599747" type="GUI_RainbowCountText">
+                                    <param id="0" name="Text">Player.RainbowBulletCount</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="6587771528050949" type="Player">
+                                    <param id="0" name="Instance variable">Is_Shooting</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="6290290905644027" type="System">
+                                    <param id="0" name="Seconds">0.25</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="99414712100417" type="Player">
+                                    <param id="0" name="Instance variable">Is_Shooting</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
