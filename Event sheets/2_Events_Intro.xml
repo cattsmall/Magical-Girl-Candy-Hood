@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>2_Events_Intro</name>
     <events>
+        <include>01_Events_Global_Controls</include>
         <comment>Hover Actions</comment>
         <event-block sid="1202015851065318">
             <conditions>

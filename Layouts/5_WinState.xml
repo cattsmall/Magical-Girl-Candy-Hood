@@ -111,7 +111,7 @@
                     <properties>
                         <text>You Win!</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Josefin Slab,-48,400,0</font>
+                        <font>Verdana,-48,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -187,7 +187,7 @@
                     <properties>
                         <text>SCORE BREAKDOWN:</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Josefin Slab,-24,700,0</font>
+                        <font>Verdana,-24,400,0</font>
                         <color>153,102,51</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -214,7 +214,7 @@
                     <properties>
                         <text>30 points</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Josefin Slab,-64,700,0</font>
+                        <font>Verdana,-64,700,0</font>
                         <color>0,153,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -241,7 +241,7 @@
                     <properties>
                         <text>TOTAL:</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Josefin Slab,-24,700,0</font>
+                        <font>Verdana,-24,400,0</font>
                         <color>153,102,51</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -253,7 +253,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>354</x>
-                        <y>490</y>
+                        <y>487</y>
                         <z>0</z>
                         <width>387</width>
                         <height>40</height>

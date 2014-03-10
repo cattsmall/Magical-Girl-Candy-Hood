@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>1_Events_TitleScreen</name>
     <events>
+        <include>01_Events_Global_Controls</include>
         <event-group description="" sid="5292219543212354" title="MouseEvents">
             <sub-events>
                 <event-block sid="9746687223267119">

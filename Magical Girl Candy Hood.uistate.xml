@@ -12,8 +12,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout>3_GameLevel</layout>
         <layout>1_TitleScreen</layout>
-        <layout active="1">2_Intro</layout>
-        <layout>4_LoseState</layout>
+        <layout>2_Intro</layout>
+        <layout active="1">4_LoseState</layout>
         <layout>5_WinState</layout>
         <event-sheet>1_Events_TitleScreen</event-sheet>
         <event-sheet>00_Events_Pre-Game_Controls</event-sheet>
@@ -21,7 +21,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet>3_Events_GameLevel</event-sheet>
         <event-sheet>4_Events_LoseState</event-sheet>
         <event-sheet>5_Events_WinState</event-sheet>
-        <event-sheet>01_Events_Main_Controls</event-sheet>
+        <event-sheet>01_Events_Global_Controls</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -29,10 +29,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="0">
-        <family expanded="1" name="PlayerBullets" />
-        <family expanded="1" name="EnemyBullets" />
-        <family expanded="1" name="Citizens" />
-        <family expanded="1" name="Platforms" />
+    <families-expanded root="1">
+        <family expanded="0" name="PlayerBullets" />
+        <family expanded="0" name="EnemyBullets" />
+        <family expanded="0" name="Citizens" />
+        <family expanded="0" name="Platforms" />
+        <family expanded="0" name="Text" />
     </families-expanded>
 </c2uistate>

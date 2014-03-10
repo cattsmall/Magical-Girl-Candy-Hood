@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>5_Events_WinState</name>
     <events>
+        <include>01_Events_Global_Controls</include>
         <comment>Home</comment>
         <event-block sid="7146543844356347">
             <conditions>

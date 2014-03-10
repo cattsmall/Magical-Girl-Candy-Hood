@@ -2516,7 +2516,7 @@
                 <instance type="Platform1" uid="168">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>  </initial-animation>
+                        <initial-animation></initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -6455,7 +6455,7 @@
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Josefin Slab,-21,700,0</font>
+                        <font>Verdana,-21,700,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -6504,7 +6504,7 @@
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Josefin Slab,-21,700,0</font>
+                        <font>Verdana,-21,700,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -6531,7 +6531,7 @@
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Josefin Slab,-21,700,0</font>
+                        <font>Verdana,-21,700,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>

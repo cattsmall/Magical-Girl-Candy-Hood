@@ -69,7 +69,7 @@
                     <properties>
                         <text>Magical Girl</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Josefin Slab,-48,400,0</font>
+                        <font>Verdana,-48,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -81,7 +81,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>246.5</x>
-                        <y>142</y>
+                        <y>146</y>
                         <z>0</z>
                         <width>531</width>
                         <height>125</height>
@@ -118,7 +118,7 @@
                     <properties>
                         <text>The Rainbow Sunshine Saga</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Josefin Slab,-29,700,0</font>
+                        <font>Verdana,-48,400,0</font>
                         <color>0,153,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -129,10 +129,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>246.5</x>
-                        <y>498</y>
+                        <x>155.5</x>
+                        <y>493</y>
                         <z>0</z>
-                        <width>531</width>
+                        <width>713</width>
                         <height>125</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>

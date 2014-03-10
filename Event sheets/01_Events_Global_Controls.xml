@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>01_Events_Global_Controls</name>
+    <events>
+        <event-block sid="9055467607953779">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="115387105223017" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set web font" sid="5157694090383964" type="Text">
+                    <param id="0" name="Family name">&quot;josefin_slabbold&quot;</param>
+                    <param id="1" name="CSS URL">&quot;josefin-font.css&quot;</param>
+                </action>
+                <action id="5" name="Set web font" sid="7758315334388799" type="TitleText">
+                    <param id="0" name="Family name">&quot;josefin_slabregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;josefin-font.css&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

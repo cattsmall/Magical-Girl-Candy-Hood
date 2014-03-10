@@ -8,7 +8,7 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>2dqqx9hj9d1c9</unique-id>
-    <saved-with-version>15802</saved-with-version>
+    <saved-with-version>16300</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -1257,6 +1257,15 @@
                 </behavior-type>
             </behaviors>
         </family>
+        <family name="Text" plugin-id="Text" sid="7768160341553939">
+            <members>
+                <member>GUI_CandyCountText</member>
+                <member>GUI_CitizenCountText</member>
+                <member>GUI_RainbowCountText</member>
+                <member>TitleText</member>
+                <member>WinScoreText</member>
+            </members>
+        </family>
     </families>
     <layout-folder expanded="1">
         <layout>1_TitleScreen.xml</layout>
@@ -1267,7 +1276,7 @@
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>1_Events_TitleScreen.xml</event-sheet>
-        <event-sheet>01_Events_Main_Controls.xml</event-sheet>
+        <event-sheet>01_Events_Global_Controls.xml</event-sheet>
         <event-sheet>00_Events_Pre-Game_Controls.xml</event-sheet>
         <event-sheet>2_Events_Intro.xml</event-sheet>
         <event-sheet>3_Events_GameLevel.xml</event-sheet>
@@ -1320,8 +1329,8 @@
         <file name="WinState.ogg" />
         <file name="WinState.wav" />
     </music-folder>
-    <files-folder expanded="0">
-        <file-folder expanded="0" name="Icons">
+    <files-folder expanded="1">
+        <file-folder expanded="1" name="Icons">
             <file name="icon-16.png" />
             <file name="icon-32.png" />
             <file name="icon-114.png" />
@@ -1329,5 +1338,14 @@
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
         </file-folder>
+        <file name="josefin-font.css" />
+        <file name="josefinslab-bold-webfont.eot" />
+        <file name="josefinslab-bold-webfont.svg" />
+        <file name="josefinslab-bold-webfont.ttf" />
+        <file name="josefinslab-bold-webfont.woff" />
+        <file name="josefinslab-regular-webfont.eot" />
+        <file name="josefinslab-regular-webfont.svg" />
+        <file name="josefinslab-regular-webfont.ttf" />
+        <file name="josefinslab-regular-webfont.woff" />
     </files-folder>
 </c2project>

@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>3_Events_GameLevel</name>
     <events>
+        <include>01_Events_Global_Controls</include>
         <variable constant="0" name="TotalRainbowBulletCount" sid="693088564055212" static="0" type="number">0</variable>
         <variable constant="0" name="TotalCitizensSaved" sid="3534707611111109" static="0" type="number">0</variable>
         <variable constant="0" name="TotalCandyBulletCount" sid="8599078261025987" static="0" type="number">0</variable>
